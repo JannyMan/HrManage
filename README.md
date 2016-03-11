@@ -28,7 +28,12 @@ hrm系统是一个综合的员工管理系统，系统主页面左边由导航�
 </hibernate-configuration>
 
 # 实现效果
-![ABC](https://github.com/xiangzhihong/ListViewHover/blob/master/screen/gif5%E6%96%B0%E6%96%87%E4%BB%B6.gif) 
+![ABC](https://github.com/xiangzhihong/HrManage/blob/master/WebRoot/sreen/login.png) 
+![ABC](https://github.com/xiangzhihong/HrManage/blob/master/WebRoot/sreen/main_depart.png) 
+![ABC](https://github.com/xiangzhihong/HrManage/blob/master/WebRoot/sreen/main_detail.png) 
+![ABC](https://github.com/xiangzhihong/HrManage/blob/master/WebRoot/sreen/person_detail.png) 
+
+
   
   
  
