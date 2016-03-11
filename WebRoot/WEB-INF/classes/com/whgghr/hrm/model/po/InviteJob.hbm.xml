@@ -1,0 +1,26 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping package="com.whgghr.hrm.model.po">
+	<class name="InviteJob" table="tb_invitejob">
+		<id name="id" column="ij_id">
+			<generator class="identity" />
+		</id>
+		<property name="name" column="ij_name"></property>
+		<property name="sex" column="ij_sex"></property>
+		<property name="age" column="ij_age"></property>
+		<property name="born" column="ij_born"></property>
+		<property name="isstock" column="ij_isstock"></property>
+		<property name="content" column="ij_content"></property>
+		<property name="createTime" column="ij_createtime"></property>
+		<property name="address" column="ij_address"></property>
+		<property name="tel" column="ij_tel"></property>
+		<property name="afterSchool" column="ij_afterSchool"></property>
+		<property name="teachSchool" column="ij_teachSchool"></property>
+		<property name="experience" column="ij_experience"></property>
+		<property name="specialty" column="ij_specialty"></property>
+		<property name="job" column="ij_job"></property>
+	</class>
+
+</hibernate-mapping>

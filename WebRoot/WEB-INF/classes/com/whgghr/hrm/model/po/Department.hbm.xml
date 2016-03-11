@@ -1,0 +1,23 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping package="com.whgghr.hrm.model.po">
+	<class name="Department" table="tb_department"  >
+		<id name="id" column="dt_id" type="java.lang.Integer" >
+			<generator class="identity"></generator>
+		</id>
+		<property name="createTime" column="dt_creatTime" type="java.util.Date"/>
+		<property name="name" column="dt_name" type="java.lang.String"/>
+		<property name="bz" column="dt_bz" type="java.lang.String"/>
+ 		<set name="emps" cascade="all" lazy="false" inverse="true"> 
+  		<key column="em_dt_id"></key>
+<!--  		<key property-ref="edtid"></key>  -->
+  		<one-to-many class="Employee"/> 
+		</set>  
+<!--         <set name="emps" cascade="save-update" lazy="false" >  -->
+<!-- 		<key column="dt_id"></key> -->
+<!--  		<one-to-many class="Employee"/>   -->
+<!-- 		</set>  -->
+	</class>
+</hibernate-mapping>

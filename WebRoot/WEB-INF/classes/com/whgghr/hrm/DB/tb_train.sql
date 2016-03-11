@@ -1,0 +1,15 @@
+INSERT INTO tb_train VALUES (1,'刘显',NULL,'2012-12-07 16:21:44','湖北省武汉市','是','无');
+INSERT INTO tb_train VALUES (2,'王严', NULL,'2013-11-02 16:21:44','江苏省南京市','是','无');
+INSERT INTO tb_train VALUES (3,'刘川', NULL,'2012-12-07 16:21:44','湖北省武汉市','是','无');
+INSERT INTO tb_train VALUES (4,'李思', NULL,'2013-11-02 10:21:44','江苏省南京市','是','无');
+INSERT INTO tb_train VALUES (5,'李泉', NULL,'2013-11-02 16:21:44','江苏省南京市','是','无');
+INSERT INTO tb_train VALUES (6,'彭瑞', NULL,'2012-12-07 16:21:44','湖北省武汉市','是','无');
+INSERT INTO tb_train VALUES (7,'秦立', NULL,'2013-11-02 16:21:44','江苏省南京市','是','无');
+INSERT INTO tb_train VALUES (8,'方林', NULL,'2012-12-07 10:21:44','湖北省武汉市','是','无');
+INSERT INTO tb_train VALUES (9,'李广', NULL,'2013-11-02 16:21:44','江苏省南京市','是','无');
+INSERT INTO tb_train VALUES (10,'张扬',NULL, '2012-12-07 11:21:44','湖北省武汉市','是','无');
+INSERT INTO tb_train VALUES (11,'谭目', NULL,'2013-11-02 16:21:44','江苏省南京市','是','无');
+INSERT INTO tb_train VALUES (12,'天天', NULL,'2013-11-02 16:21:44','江苏省南京市','是','无');
+INSERT INTO tb_train VALUES (13,'张三', NULL,'2012-12-07 13:21:44','湖北省武汉市','是','无');
+INSERT INTO tb_train VALUES (14,'刘泰', NULL,'2012-12-07 12:21:44','湖北省武汉市','是','无');
+INSERT INTO tb_train VALUES (15,'冯离', NULL,'2012-12-07 14:21:44','湖北省武汉市','是','无');

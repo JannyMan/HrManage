@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+	
+<struts>
+<constant name="struts.devMode" value="true" />
+
+	<package name="Pay" namespace="/" extends="struts-default">
+		<action name="pay_*" class="payAction" method="{1}">
+ 			<result name="list">/pay/pay_query.jsp</result> 
+ 			<result name="load">/pay/pay_queryOne.jsp</result>
+			<result name="input">/pay/pay_insert.jsp</result>
+			<result name="list_load" type="redirectAction">
+                 <param name="namespace">/</param>
+                 <param name="actionName">pay_list</param>
+                 <param name="page">${page}</param>
+                 <param name="pageSize">${pageSize}</param>
+     </result>
+		</action>	
+	</package>
+</struts>

@@ -1,0 +1,14 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping package="com.whgghr.hrm.model.po">
+	<class name="Manager" table="tb_manager">
+		<id name="id" column="mg_id">
+			<generator class="identity" />
+		</id>
+		<property name="account" column="mg_account"></property>
+		<property name="pwd" column="mg_pwd"></property>
+		<property name="managerLevel" column="mg_managerLevel"></property>
+	</class>
+</hibernate-mapping>

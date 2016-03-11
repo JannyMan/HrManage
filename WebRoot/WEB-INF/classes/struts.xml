@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+	<constant name="struts.action.extension" value="action" />
+	<constant name="struts.devMode" value="true" />
+	<package name="default" extends="struts-default">
+		<action name="login" class="loginAction">
+			<result name="error">/error.jsp</result>
+			<result name="success">/mainPage.jsp</result>
+		</action>
+		<!-- 让用户直接访问该应用时列出所有视图页面 -->
+		<action name="department_*" class="departmentAction" method="{1}">
+			<result name="list">/depmanager/department_query.jsp</result>
+			<result name="load">/depmanager/department_deawith.jsp</result>
+			<result name="load_load" type="redirectAction">
+				<param name="namespace">/</param>
+				<param name="actionName">department_load</param>
+				<param name="uids">${departments.id}</param>
+				<param name="page">${page}</param>
+				<param name="pageSize">${pageSize}</param>
+			</result>
+			<result name="list_load" type="redirectAction">
+				<param name="uids">${departments.id}</param>
+				<param name="namespace">/</param>
+				<param name="actionName">department_list</param>
+			</result>
+			<result name="input">/depmanager/department_insert.jsp</result>
+		</action>
+		<action name="*">
+			<result>/{1}.jsp</result>
+		</action>
+	</package>
+	<!-- 将InviteJob的配置文件分离出去 -->
+	<include file="struts-InviteJob.xml" />
+	<!-- 将Train的配置文件分离出去 -->
+	<include file="struts-Train.xml" />
+	<!-- 将Employee的配置文件分离出去 -->
+	<include file="struts-Employee1.xml" />
+	<!-- 将CJ的配置文件分离出去 -->
+	<include file="struts-RewardsandPunishments.xml" />
+	<!-- 将Pay的配置文件分离出去 -->
+	<include file="struts-Pay.xml" />
+	<!-- 将Mamager的配置文件分离出去 -->
+	<include file="struts-sysManager.xml" />
+</struts>

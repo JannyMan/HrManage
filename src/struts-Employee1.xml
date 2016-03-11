@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<constant name="struts.devMode" value="true" />
+
+	<package name="Employee" namespace="/" extends="struts-default">
+		<action name="employee_*" class="empAction"
+			method="{1}">
+			<result name="query">/employee/employee_queryOne.jsp</result>
+			<result name="load">/employee/employee_update.jsp</result>
+			<result name="list">/employee/employee_query.jsp</result>
+			<result name="find">/employee/employee_find.jsp</result>
+			<result name="input">/employee/employee_add.jsp</result>
+			<result name="forwardadd">/employee/employee_add.jsp</result>
+			<result name="list_load" type="redirectAction">
+				<param name="namespace">/</param>
+				<param name="uids">${employee.serialNumber}</param>
+				<param name="actionName">employee_list</param>
+				<param name="page">${page}</param>
+				<param name="pageSize">${pageSize}</param>
+			</result>
+		</action>
+	</package>
+</struts>

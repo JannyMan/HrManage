@@ -1,0 +1,17 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping package="com.whgghr.hrm.model.po">
+	<class name="Train" table="tb_train">
+		<id name="id" column="tn_id">
+			<generator class="identity" />
+		</id>
+		<property name="man" column="tn_man"></property>
+		<property name="content" column="tn_content"></property>
+		<property name="time" column="tn_time"></property>
+		<property name="address" column="tn_address"></property>
+		<property name="join" column="tn_join"></property>
+		<property name="bz" column="tn_bz"></property>
+	</class>
+</hibernate-mapping>

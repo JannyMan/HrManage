@@ -1,0 +1,15 @@
+INSERT INTO tb_manager VALUES (1, 'Mr.A', '123245', 'C');
+INSERT INTO tb_manager VALUES (2, 'bachao', 'w321', 'B');
+INSERT INTO tb_manager VALUES (3, 'Mr.liu', '435yy', 'A');
+INSERT INTO tb_manager VALUES (4, 'tianli', 'yi1002', 'D');
+INSERT INTO tb_manager VALUES (5, 'machao', '2012', 'B');
+INSERT INTO tb_manager VALUES (6, 'caozhi', '3ww', 'C');
+INSERT INTO tb_manager VALUES (7, 'zhenji', 'sting', 'C');
+INSERT INTO tb_manager VALUES (8, 'Mr.bag', 'wegn', 'C');
+INSERT INTO tb_manager VALUES (9, 'y_x', 'swing001', 'A');
+INSERT INTO tb_manager VALUES (10, 'shenl', 'test', 'A');
+INSERT INTO tb_manager VALUES (11, 'szy', '1234', 'D');
+INSERT INTO tb_manager VALUES (12, 'zegu', '5433', 'B');
+INSERT INTO tb_manager VALUES (13, 'feibo', 'tt123', 'D');
+INSERT INTO tb_manager VALUES (14, 'pander', 'pdf01', 'A');
+INSERT INTO tb_manager VALUES (15, 'shif', 'shif002', 'C');

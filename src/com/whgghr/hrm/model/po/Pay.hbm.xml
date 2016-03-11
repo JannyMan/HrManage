@@ -1,0 +1,23 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping package="com.whgghr.hrm.model.po">
+	<class name="Pay" table="tb_pay">
+		<id name="id" column="pay_id">
+			<generator class="identity" />
+		</id>
+		<property name="emName" column="pay_emName" /><!--
+			<property name="pay_em_serialNumber" column="pay_em_serialNumber" />
+		--><property name="month" column="pay_month" />
+		<property name="baseMoney" column="pay_baseMoney" />
+		<property name="overTime" column="pay_overtime" />
+		<property name="safety" column="pay_safety" />
+		<property name="absent" column="pay_absent" />
+		<property name="check" column="pay_check" />
+		<property name="age" column="pay_age" />
+		<property name="em_serialNumber" column="pay_em_serialNumber" unique="true" insert="false" update="false"/>
+		<many-to-one name="emp"   foreign-key="pay_em_serialNumber" lazy="false" >
+ 		<column name="pay_em_serialNumber" /></many-to-one> 
+	</class>
+</hibernate-mapping>

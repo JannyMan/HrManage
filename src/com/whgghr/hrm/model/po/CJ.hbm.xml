@@ -1,0 +1,16 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping package="com.whgghr.hrm.model.po">
+	<class name="CJ" table="tb_cj">
+		<id name="id" column="cj_id">
+			<generator class="native" />
+		</id>
+		<property name="title" column="cj_title"></property>
+		<property name="type" column="cj_type"></property>
+		<property name="content" column="cj_content"></property>
+		<property name="money" column="cj_money"></property>
+		<property name="time" column="cj_time"></property>
+	</class>
+</hibernate-mapping>

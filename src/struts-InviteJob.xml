@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+	
+<struts>
+
+	<!--<constant name="struts.action.extension" value="do"/>
+    --><constant name="struts.devMode" value="true" />
+
+	<package name="InviteJob" namespace="/" extends="struts-default">
+		<action name="inviteJob_*" class="inviteAction" method="{1}">
+			<result name="list">/invitemanager/invitejob_query.jsp</result>
+			<result name="show">/invitemanager/invitejob_queryOne.jsp</result>
+		    <result name="input">/invitemanager/invitejob_add.jsp</result>
+		    <result name="list_load" type="redirectAction">
+                 <param name="namespace">/</param>
+                <param name="actionName">inviteJob_list</param>
+                <param name="page">${page}</param>
+                <param name="pageSize">${pageSize}</param>
+     </result>
+		</action>	
+	</package>
+
+</struts>

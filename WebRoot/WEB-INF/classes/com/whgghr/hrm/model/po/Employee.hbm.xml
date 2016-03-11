@@ -1,0 +1,46 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+<hibernate-mapping package="com.whgghr.hrm.model.po">
+	<class name="Employee" table="tb_employee">
+		<id name="serialNumber" column="em_serialNumber">
+			<generator class="identity"></generator>
+		</id>
+		<property name="id" column="em_id"/>
+		<property name="name" column="em_name"/>
+		<property name="sex" column="em_sex"/>
+		<property name="age" column="em_age" />
+		<property name="IDCard" column="em_IDCard"/>
+		<property name="bz" column="em_bz"/>
+		<property name="createName" column="em_createName"/>
+		<property name="createTime" column="em_createTime"/>
+		<property name="typeWork" column="em_typeWork"/>
+		<property name="startTime" column="em_startime"/>
+		<property name="culture" column="em_culture"/>
+		<property name="speciality" column="em_speciality"/>
+		<property name="afterSchool" column="em_afterSchool"/>
+		<property name="address" column="em_address"/>
+		<property name="tel" column="em_tel"/>
+		<property name="ancestralHome" column="em_ancestralHome"/>
+		<property name="visage" column="em_visage"></property>
+		<property name="marriage" column="em_marriage"></property>
+		<property name="nation" column="em_nation"></property>
+		<property name="born" column="em_born"></property>
+   		<property name="edtid" column="em_dt_id" unique="true" insert="false" update="false"/> 
+<!--             <property name="em_dt_id" column="em_dt_id" fetch="join"></property>  
+  foreign-key="em_dt_id"   property-ref="edtid" fetch="join"
+-->
+<!--  		update="false" insert="false"  not-found=ignore unique="true"   optional = true-->
+		  <many-to-one name="depart" lazy="false" cascade="all">
+ 		  <column name="em_dt_id" not-null="true"></column> 
+ 	    </many-to-one>   
+ 	    <set name="pay" cascade="all" lazy="false" inverse="true"> 
+  		<key column="pay_em_serialNumber"></key>
+  		<one-to-many class="Pay"/> 
+		</set>  
+<!-- 	        <many-to-one name="depart" fetch="select" lazy="false" cascade="all"> -->
+<!-- 	        <column name="dt_id"></column> -->
+<!--  	        </many-to-one>   -->
+	</class>
+</hibernate-mapping>

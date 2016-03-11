@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:aop="http://www.springframework.org/schema/aop"
+   xmlns:tx="http://www.springframework.org/schema/tx"
+  xsi:schemaLocation="
+ http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+    http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+  
+    <!-- 定义一个业务逻辑组件，实现类为MyServiceImp -->
+   <!--<bean id="myService" class="com.whgghr.guanli.MyServiceImpl"/>
+   --><!-- 让Spring管理的Action示例 -->
+   <bean id="loginAction" class="com.whgghr.action.FindUserAction" scope="prototype">
+   <property name="managerdao" ref="managerDao"/>
+   </bean>
+   <bean id="departmentAction" class="com.whgghr.action.DepartmentAction" scope="prototype">
+   <property name="departmentMgr" ref="depDao"/>
+   </bean>
+   <bean id="empAction" class="com.whgghr.action.EmployeeAction" scope="prototype">
+   <property name="employeeMgr" ref="empDao"/>
+   <property name="departmentMgr" ref="depDao"/>
+   </bean>
+   <bean id="inviteAction" class="com.whgghr.action.InviteJobAction" scope="prototype">
+   <property name="inviteJobMgr" ref="invitDao"/>
+   </bean>
+   <bean id="trainAction" class="com.whgghr.action.TrainAction" scope="prototype">
+   <property name="traindao" ref="trainDao"/>
+   </bean>
+   <bean id="cjAction" class="com.whgghr.action.RewardsandPunishmentsAction" scope="prototype">
+   <property name="cjmanager" ref="cjDao"/>
+   </bean>
+   <bean id="payAction" class="com.whgghr.action.PayAction" scope="prototype">
+   <property name="payMgr" ref="payDao"/>
+   </bean>
+   <bean id="MagerAction" class="com.whgghr.action.ManagerAction" scope="prototype">
+   <property name="MgerMgr" ref="MgerDao"/>
+   </bean>
+   </beans>

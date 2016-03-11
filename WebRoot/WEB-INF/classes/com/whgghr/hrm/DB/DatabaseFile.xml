@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Hello World" default="buildsql" basedir=".">
+
+
+<property name="mysqlpassword" value="1234"/>
+<property name="mysqlpath" value="E:\mysql-connector-java-5.1.13-bin.jar"/>
+	<!--property name="mysqlpath" value=".\mysql-connector-java-5.1.13-bin.jar"/-->
+<target name="buildsql">
+<sql
+    driver="com.mysql.jdbc.Driver"
+    url="jdbc:mysql://localhost:3306/hrm?characterEncoding=utf-8"
+    userid="root"
+    password="${mysqlpassword}">
+   <classpath>
+		<pathelement location="${mysqlpath}"/>
+	</classpath> 
+    <transaction src="newfile.sql"/>
+	
+	<transaction src="tb_manager.sql"/> 
+
+	<transaction src="tb_employee.sql"/>
+	<transaction src="tb_department.sql"/>
+	<transaction src="tb_cj.sql"/> 
+	<transaction src="tb_train.sql"/> 
+	<transaction src="tb_pay.sql"/>
+	<transaction src="tb_invitejob.sql"/> 
+</sql>
+
+</target>
+
+
+
+</project>
